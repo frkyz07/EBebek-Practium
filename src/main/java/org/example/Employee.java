@@ -8,8 +8,12 @@ public class Employee {
     int year;
 
 
-  /*  public Employee(String name, Double salary, Double workHours, int year) {
-    }*/
+    public Employee(String name, Double salary, Double workHours, int year) {
+        this.name = name;
+        this.salary = salary;
+        this.workHours = workHours;
+        this.year = year;
+    }
 
     public double tax(Double salary){
 
@@ -21,7 +25,7 @@ public class Employee {
         return tax;
     }
     public double bonus(double workHours,double salary){
-
+        this.salary = salary;
         this.workHours = workHours;
         double hourlyPay = 30;
         double extraHours = 0;
@@ -30,8 +34,11 @@ public class Employee {
         if(workHours>40){
             extraHours = workHours - 40;
             salaryWithBonus = (extraHours*hourlyPay)+salary;
+            return salaryWithBonus;
+        }else{
+            return salary;
         }
-        return salaryWithBonus;
+
     }
 
     public double raiseSalary(int year,double salary,double workHours){
@@ -41,36 +48,45 @@ public class Employee {
 
         int currentDate = 2021;
         double newSalary = 0;
+        double raisedSalary =0;
         int workYear = currentDate - year;
 
+
         if (workYear<10){
-            newSalary = salary*1.05;
+            raisedSalary = salary*1.05;
         }
         else if (workYear>9 && workYear<20 ) {
-            newSalary = salary*1.10;
+            raisedSalary = salary*1.10;
         }
         else if (workYear>19){
-            newSalary = salary*1.15;
+            raisedSalary = salary*1.15;
         }
 
-        newSalary = bonus(workHours,salary); // salary'e bonus eklendi
-
+        newSalary = bonus(workHours,raisedSalary); // salary'e bonus eklendi
         newSalary = newSalary-tax(newSalary); // tax düşüldü
+
+        System.out.println("Salary tax "+tax(newSalary));
+        System.out.println("Salary bonus after raise "+bonus(workHours,raisedSalary));
+        System.out.println("Total Amount of raise "+(newSalary-salary));
+        System.out.println("New salary "+newSalary);
 
         return newSalary;
 
     }
 
-    public String toString(){
-        return toString();
+    public void information(){
+        Employee ee = new Employee("faruk", 2000.0,50.0,2010);
+        System.out.println("Employee name: "+ee.name);
+        System.out.println("Employee salary: "+ee.salary);
+        System.out.println("Employee workHours: "+ee.workHours);
+        System.out.println("Employee start year: "+ee.year);
+        System.out.println("Employee new salary:"+ee.raiseSalary(ee.year,ee.salary,ee.workHours));
     }
 
 
     public static void main(String[] args) {
-        Employee ee = new Employee();
-        System.out.println(ee.tax(Double.valueOf(2000)));
-        System.out.println(ee.bonus(Double.valueOf(45),2000));
-        System.out.println(ee.raiseSalary(2015,2000,45));
-        System.out.println("Hello world!");
+        Employee ee = new Employee("faruk", 2000.0,50.0,2010);
+        ee.information();
+
     }
 }
