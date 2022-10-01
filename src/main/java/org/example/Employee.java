@@ -56,7 +56,7 @@ public class Employee {
         }
         raisedSalary = (raisedSalaryAmounth+bonus(workHours,salary)+salary);
 
-        return raisedSalary-tax(raisedSalary);
+        return raisedSalary;
     }
 
     public String toString(){
@@ -75,7 +75,7 @@ public class Employee {
         System.out.println("Bonus amounth: "+bonus(workHours,salary));
         System.out.println("Raised amounth: "+raisedAmounth);
         System.out.println("Salary after bonus and raise: "+raisedSalary);
-        System.out.println("New salary: "+newSalary);
+        System.out.println("New salary: "+(newSalary-tax(raisedSalary)));
 
         return null;
     }
@@ -85,3 +85,4 @@ public class Employee {
         ee.toString();
     }
 }
+/* tax'in değeri doğru gelmiyor ve aslından yıldan gelen zam da gösterilebilir*/
