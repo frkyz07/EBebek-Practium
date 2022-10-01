@@ -49,6 +49,7 @@ public class Employee {
         int currentDate = 2021;
         double newSalary = 0;
         double raisedSalary =0;
+        double bonusAmounth =0;
         int workYear = currentDate - year;
 
 
@@ -62,10 +63,12 @@ public class Employee {
             raisedSalary = salary*1.15;
         }
 
+        bonusAmounth = bonus(workHours,salary)- salary;
         newSalary = bonus(workHours,raisedSalary); // salary'e bonus eklendi
         newSalary = newSalary-tax(newSalary); // tax düşüldü
 
-        System.out.println("Salary bonus after raise "+bonus(workHours,raisedSalary));
+        System.out.println("Bonus amounth "+bonusAmounth);
+        System.out.println("Salary after bonus and raise "+bonus(workHours,raisedSalary));
         System.out.println("Salary tax "+ tax(newSalary));
         System.out.println("Total Amount of raise "+(newSalary-salary));
         System.out.println("New salary "+newSalary);
@@ -75,7 +78,6 @@ public class Employee {
     }
 
     public void information(){
-        //Employee ee = new Employee("faruk", 2000.0,50.0,2010);
         System.out.println("Employee name: "+name);
         System.out.println("Employee salary: "+salary);
         System.out.println("Employee workHours: "+workHours);
@@ -85,7 +87,7 @@ public class Employee {
 
 
     public static void main(String[] args) {
-        Employee ee = new Employee("faruk", 2000.0,50.0,2010);
+        Employee ee = new Employee("ahmet", 3000.0,50.0,2005);
         ee.information();
 
     }
