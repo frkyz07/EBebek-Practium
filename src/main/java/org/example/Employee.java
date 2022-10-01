@@ -75,12 +75,12 @@ public class Employee {
     }
 
     public void information(){
-        Employee ee = new Employee("faruk", 2000.0,50.0,2010);
-        System.out.println("Employee name: "+ee.name);
-        System.out.println("Employee salary: "+ee.salary);
-        System.out.println("Employee workHours: "+ee.workHours);
-        System.out.println("Employee start year: "+ee.year);
-        System.out.println("Employee new salary:"+ee.raiseSalary(ee.year,ee.salary,ee.workHours));
+        //Employee ee = new Employee("faruk", 2000.0,50.0,2010);
+        System.out.println("Employee name: "+name);
+        System.out.println("Employee salary: "+salary);
+        System.out.println("Employee workHours: "+workHours);
+        System.out.println("Employee start year: "+year);
+        System.out.println("Employee new salary:"+raiseSalary(year,salary,workHours));
     }
 
 
