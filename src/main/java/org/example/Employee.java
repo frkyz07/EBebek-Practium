@@ -65,8 +65,8 @@ public class Employee {
         newSalary = bonus(workHours,raisedSalary); // salary'e bonus eklendi
         newSalary = newSalary-tax(newSalary); // tax düşüldü
 
-        System.out.println("Salary tax "+tax(newSalary));
         System.out.println("Salary bonus after raise "+bonus(workHours,raisedSalary));
+        System.out.println("Salary tax "+ tax(newSalary));
         System.out.println("Total Amount of raise "+(newSalary-salary));
         System.out.println("New salary "+newSalary);
 

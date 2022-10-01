@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35f23a18-eefd-42d5-a0ed-2b60eaaf52b6" name="Changes" comment="- project finished" />
+    <list default="true" id="35f23a18-eefd-42d5-a0ed-2b60eaaf52b6" name="Changes" comment="- fixes">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Employee.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,7 +74,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664643173963</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="- project finished">
+      <created>1664643429286</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664643429287</updated>
+    </task>
+    <task id="LOCAL-00004" summary="- fixes">
+      <created>1664643586926</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664643586926</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -89,6 +105,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- start to work on ebebek project" />
     <MESSAGE value="- project finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="- project finished" />
+    <MESSAGE value="- fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="- fixes" />
   </component>
 </project>
