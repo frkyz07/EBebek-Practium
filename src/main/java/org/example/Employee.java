@@ -81,7 +81,7 @@ public class Employee {
     }
 
     public static void main(String[] args) {
-        Employee ee = new Employee("ahmet", 1000.0,40.0,2010);
+        Employee ee = new Employee("ahmet", 2000.0,50.0,2010);
         ee.toString();
     }
 }
