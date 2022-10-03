@@ -61,7 +61,6 @@ public class Employee {
 
     public String toString(){
 
-        double totalRaise = (bonus(workHours,salary)+(raiseSalary(year,salary,workHours)-salary));
         double raisedSalary = raiseSalary(year,salary,workHours);
         double tax = tax(raisedSalary);
         double raisedAmounth = raiseSalary(year,salary,workHours)-salary;
@@ -73,7 +72,8 @@ public class Employee {
         System.out.println("Employee start year: "+year);
         System.out.println("Salary tax: "+ tax);
         System.out.println("Bonus amounth: "+bonus(workHours,salary));
-        System.out.println("Raised amounth: "+raisedAmounth);
+        System.out.println("Raise for years: "+(raisedAmounth-bonus(workHours,salary)));
+        System.out.println("Total Raised amounth: "+raisedAmounth);
         System.out.println("Salary after bonus and raise: "+raisedSalary);
         System.out.println("New salary: "+(newSalary-tax(raisedSalary)));
 
@@ -81,7 +81,7 @@ public class Employee {
     }
 
     public static void main(String[] args) {
-        Employee ee = new Employee("ahmet", 2000.0,50.0,2010);
+        Employee ee = new Employee("Ahmet", 4000.0,60.0,2010);
         ee.toString();
     }
 }
